@@ -39,9 +39,9 @@ public class TelaPrincipal extends JFrame {
         painelMenu.add(btnSobre);
         painelMenu.add(btnSair);
 
-        // Adiciona os painéis à tela principal
-        add(painelTitulo, BorderLayout.NORTH);
-        add(painelMenu, BorderLayout.CENTER);
+        // Adiciona o painel de menu à parte superio da tela principal
+        add(painelMenu, BorderLayout.NORTH);
+
     }
 
     public static void main(String[] args) {

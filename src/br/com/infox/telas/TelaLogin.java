@@ -30,6 +30,8 @@ public class TelaLogin extends JFrame implements ActionListener {
                 JOptionPane.showMessageDialog(null,"Login bem sucedido");
                 TelaPrincipal principal = new TelaPrincipal();//para chamar preciso instanciar o objeto
                 principal.setVisible(true);
+                this.dispose();//essa linha permite fechar a tela de login
+                conexao.close();
 
             } else {
                 JOptionPane.showMessageDialog(null, "usuario e/ou senha invalido(s)");
@@ -81,10 +83,10 @@ public class TelaLogin extends JFrame implements ActionListener {
         add(cancelarButton);
 
 
-        JButton statusButton = new JButton("Status");
+       /*JButton statusButton = new JButton("Status");
         statusButton.setBounds(140, 130, 100, 25);
         statusButton.addActionListener(this);
-        add(statusButton);
+        add(statusButton);*/
     }
 
     public void actionPerformed(ActionEvent e) {
@@ -95,17 +97,19 @@ public class TelaLogin extends JFrame implements ActionListener {
             String login = usuarioField.getText();
             String senha = new String(senhaField.getPassword());
 
-            JOptionPane.showMessageDialog(this, "Dados enviados:Usuario: " + login + ", Senha: " + senha);
+            //JOptionPane.showMessageDialog(this, "Dados enviados:Usuario: " + login + ", Senha: " + senha);
         } else if (e.getSource() == cancelarButton) {
             usuarioField.setText("");
             senhaField.setText("");
-        } else if (e.getSource() == statusButton) {
+       /* } else if (e.getSource() == statusButton) {
             boolean isConnected = verificarConexao();
             if (isConnected) {
                 statusLabel.setText("Status: Conectado");
             } else {
                 statusLabel.setText("Status: Desconectado");
-            }
+            }*/
+
+            
         }
 
     }
