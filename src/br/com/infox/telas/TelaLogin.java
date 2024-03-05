@@ -47,7 +47,7 @@ public class TelaLogin extends JFrame implements ActionListener {
     private JPasswordField senhaField;
     private JButton enviarButton;
     private JButton cancelarButton;
-    private JLabel statusLabel;
+    //private JLabel statusLabel;
 
     public TelaLogin() {
 
@@ -109,7 +109,7 @@ public class TelaLogin extends JFrame implements ActionListener {
                 statusLabel.setText("Status: Desconectado");
             }*/
 
-            
+
         }
 
     }
